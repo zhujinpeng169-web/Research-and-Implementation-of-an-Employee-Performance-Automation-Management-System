@@ -14,7 +14,7 @@ fi
 
 echo "Starting frontend..."
 cd "$FRONTEND_DIR"
-nohup npm run dev -- --host 0.0.0.0 --port "$FRONTEND_PORT" >"$FRONTEND_LOG_FILE" 2>&1 &
+nohup npm run dev -- --host 0.0.0.0 --port "$FRONTEND_PORT" </dev/null >"$FRONTEND_LOG_FILE" 2>&1 &
 echo $! > "$FRONTEND_PID_FILE"
 
 for _ in $(seq 1 60); do

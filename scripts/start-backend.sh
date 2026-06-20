@@ -29,7 +29,7 @@ nohup env \
   MYSQL_DATABASE="$MYSQL_DATABASE" \
   MYSQL_USERNAME="$MYSQL_USERNAME" \
   MYSQL_PASSWORD="$MYSQL_PASSWORD" \
-  "$MAVEN_BIN" -f "$BACKEND_DIR/pom.xml" spring-boot:run >"$BACKEND_LOG_FILE" 2>&1 &
+  "$MAVEN_BIN" -f "$BACKEND_DIR/pom.xml" spring-boot:run </dev/null >"$BACKEND_LOG_FILE" 2>&1 &
 
 echo $! > "$BACKEND_PID_FILE"
 
